@@ -1,0 +1,94 @@
+<project default="runtests">
+	<property name="version" value="2.303.4.0"/>
+	<property environment="env"/>
+	<property name="provar.home" value="C:/Program Files/Provar2.8New/"/>
+	<property name="testproject.home" value=".."/>
+	<property name="testproject.results" value="../ANT/Results"/>
+
+	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
+	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
+	
+	<target name="runtests">
+	
+		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
+	
+		<Run-Test-Case provarHome="${provar.home}" 
+				projectPath="${testproject.home}" 
+				resultsPath="${testproject.results}" 
+				resultsPathDisposition="Increment" 
+				testEnvironment="" 
+				webBrowser="Chrome" 
+			smtpPath="${testproject.home}/.smtp"
+				webBrowserConfiguration="Full Screen"
+				webBrowserProviderName="Desktop"
+				webBrowserDeviceName="Full Screen" 
+				salesforceMetadataCache="Reuse" 
+				projectCachePath="../.provarCaches"
+				testOutputlevel="BASIC" 
+				pluginOutputlevel="WARNING"
+				stopTestRunOnError="false"
+		>
+			<fileset id="testplan" dir="../plans/plan1"></fileset>
+			<planFeature name="PDF" type="OUTPUT" enabled="true"/>
+			<planFeature name="PIECHART" type="OUTPUT" enabled="true"/>
+			<planFeature name="EMAIL" type="NOTIFICATION" enabled="true"/>
+
+		</Run-Test-Case>
+		<Run-Test-Case provarHome="${provar.home}" 
+						projectPath="${testproject.home}" 
+						resultsPath="${testproject.results}" 
+						resultsPathDisposition="Increment" 
+						testEnvironment="" 
+			smtpPath="${testproject.home}/.smtp"
+						webBrowser="Chrome" 
+						webBrowserConfiguration="Full Screen"
+						webBrowserProviderName="Desktop"
+						webBrowserDeviceName="Full Screen" 
+						salesforceMetadataCache="Reuse" 
+						projectCachePath="../.provarCaches"
+						testOutputlevel="BASIC" 
+						pluginOutputlevel="WARNING"
+						stopTestRunOnError="false"
+				>
+					<fileset id="testplan" dir="../plans/plan1"></fileset>
+					<planFeature name="PDF" type="OUTPUT" enabled="true"/>
+					<planFeature name="PIECHART" type="OUTPUT" enabled="true"/>
+					<planFeature name="EMAIL" type="NOTIFICATION" enabled="true"/>
+
+				</Run-Test-Case>
+		<Run-Test-Case provarHome="${provar.home}" 
+						projectPath="${testproject.home}" 
+						resultsPath="${testproject.results}" 
+						resultsPathDisposition="Increment" 
+						testEnvironment="" 
+			smtpPath="${testproject.home}/.smtp"
+						webBrowser="Chrome" 
+						webBrowserConfiguration="Full Screen"
+						webBrowserProviderName="Desktop"
+						webBrowserDeviceName="Full Screen" 
+						salesforceMetadataCache="Reuse" 
+						projectCachePath="../.provarCaches"
+						testOutputlevel="BASIC" 
+						pluginOutputlevel="WARNING"
+						stopTestRunOnError="false"
+				>
+					<fileset id="testplan" dir="../plans/plan1"></fileset>
+					<planFeature name="PDF" type="OUTPUT" enabled="true"/>
+					<planFeature name="PIECHART" type="OUTPUT" enabled="true"/>
+					<planFeature name="EMAIL" type="NOTIFICATION" enabled="true"/>
+
+				</Run-Test-Case>
+		<Test-Cycle-Report provarHome="${provar.home}"
+											projectPath="${testproject.home}" 
+								        	testCyclePath="${testcycle.path}"
+											reportPath="${testcycle.path}/Report.pdf"
+											failBuildIfFailures="true"
+											invokeTestRunMonitor="true"
+											>
+								<emailProperties sendEmail="true" primaryRecipients="vishal.poudel@provartesting.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="true"/>
+											<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="false" includeBasicLogs="true" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="false" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
+										</Test-Cycle-Report>
+
+	</target>
+
+</project>

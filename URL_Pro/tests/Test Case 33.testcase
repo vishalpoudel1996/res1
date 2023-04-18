@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="1">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.provarlabs.PageObjectCleaner" name="PageObjectCleaner" testItemId="1" title="Page Object Cleaner: ⇒ abc">
+      <arguments>
+        <argument id="cleanPageObjects">
+          <value class="value" valueClass="string">Remove</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">abc</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

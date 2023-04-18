@@ -1,0 +1,198 @@
+<project default="runtests">
+	<property environment="env"/>
+	<property name="provar.home" value="../../ProvarHome"/>
+	<property name="testproject.home" value=".."/>
+	<property name="testproject.results" value="../ANT/Results"/>
+	<property name="secrets.password" value="${env.ProvarSecretsPassword}"/>
+	<property name="testenvironment.secretspassword" value="${env.ProvarSecretsPassword_EnvName}"/>
+	
+	<property name="testcycle.path" value="../JenkinsTestcycle"/>
+	
+	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
+	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
+	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
+	
+	<target name="runtests">
+	
+		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
+	
+		<parallel>
+			<Run-Test-Case provarHome="${provar.home}" 
+					projectPath="${testproject.home}" 
+					resultsPath="${testproject.results}/results1" 
+					resultsPathDisposition="Replace" 
+					testEnvironment="" 
+					webBrowser="Chrome_Headless" 
+					webBrowserConfiguration="1920x1080"
+					webBrowserProviderName="Desktop"
+					webBrowserDeviceName="1920x1080" 
+					excludeCallableTestCases="true" 
+					salesforceMetadataCache="Reload" 
+					projectCachePath="../../.provarCache01"
+					testOutputlevel="INFO" 
+					pluginOutputlevel="INFO"
+					stopTestRunOnError="false"
+					secretsPassword="${secrets.password}"
+					testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
+		        		testCyclePath="${testcycle.path}"
+	    	    			testCycleRunType="ALL"
+					dontFailBuild="true"
+					invokeTestRunMonitor="false"
+					>
+						<fileset dir="../tests"><include name="HBT_TC1a_StdAcct_HubDun_NewCntc.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC1b_StdAcct_NewOpp_NewCase.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC1c_StdAcct_NewTeam_NewPrj.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC2_Acct_NewAcctPlan_Appr.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC3_Acct_NewTerrPlan_Appr.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC4_Fire_OpportunityDeepClone.testcase"/></fileset>				
+						<fileset dir="../tests"><include name="HBT_TC6a_CoreOpp_SAcct_TPC.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC6b_Opp_Prod_noSEA_ClsErr.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC6c_Opp_Contact_Quote.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC6d_SEALevelApprovalProcess.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC7_CoreOpp_fromStdAcct.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC8_CoreOpp_fromCntc.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC9_NewOpp_RunRate.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC10_CoreOpp_fromPtnrAcct.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC11_RROpp_NP_ClseWon_NoSEA.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC12_Opp_ProdAER_ClsLost.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC14_Acct_AcctPlan_Reject.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC15_Acct_TerrPlan_Reject.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC16_CoreOpp_Project.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC18_NewCampaign_AddLead.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC19_NewLead_AddCamp_UpdtLd.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC_Deep Clone on Quote.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC_Adding_Team_member_Contact.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC24_NewFund_MDF_Claim_Appr.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC25_E2E_HBT_Sales_Flow.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC26_ListingAndExclusionScenario.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC01_R2_Profile_Creation.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC04_NewStdAcct_Manual.testcase"/></fileset>
+			</Run-Test-Case>
+
+			<Run-Test-Case provarHome="${provar.home}" 
+					projectPath="${testproject.home}" 
+					resultsPath="${testproject.results}/results2" 
+					resultsPathDisposition="Replace" 
+					testEnvironment="" 
+					webBrowser="Chrome_Headless" 
+					webBrowserConfiguration="1920x1080"
+					webBrowserProviderName="Desktop"
+					webBrowserDeviceName="1920x1080" 
+					excludeCallableTestCases="true" 
+					salesforceMetadataCache="Reload" 
+					projectCachePath="../../.provarCache02"
+					testOutputlevel="INFO" 
+					pluginOutputlevel="INFO"
+					stopTestRunOnError="false"
+					secretsPassword="${secrets.password}"
+					testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
+		        		testCyclePath="${testcycle.path}"
+	    	    			testCycleRunType="ALL"
+					dontFailBuild="true"
+					invokeTestRunMonitor="false"
+					>
+						<fileset dir="../tests"><include name="HBT_TC_Deep Clone on Quote.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC_Adding_Team_member_Contact.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC24_NewFund_MDF_Claim_Appr.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC25_E2E_HBT_Sales_Flow.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC26_ListingAndExclusionScenario.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC01_R2_Profile_Creation.testcase"/></fileset>
+						<fileset dir="../tests"><include name="HBT_TC04_NewStdAcct_Manual.testcase"/></fileset>
+			</Run-Test-Case>
+			
+			<Run-Test-Case provarHome="${provar.home}" 
+					projectPath="${testproject.home}" 
+					resultsPath="${testproject.results}/results3" 
+					resultsPathDisposition="Replace" 
+					testEnvironment="" 
+					webBrowser="Chrome_Headless" 
+					webBrowserConfiguration="1920x1080"
+					webBrowserProviderName="Desktop"
+					webBrowserDeviceName="1920x1080" 
+					excludeCallableTestCases="true" 
+					salesforceMetadataCache="Reload" 
+					projectCachePath="../../.provarCache03"
+					testOutputlevel="INFO" 
+					pluginOutputlevel="INFO"
+					stopTestRunOnError="false"
+					secretsPassword="${secrets.password}"
+					testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
+		        		testCyclePath="${testcycle.path}"
+	    	    			testCycleRunType="ALL"
+					dontFailBuild="true"
+					invokeTestRunMonitor="false"
+					>
+						<fileset dir="../tests/Lead Conversion"></fileset>
+						<fileset dir="../tests/HBS"></fileset>
+						<fileset dir="../tests/EP Scenario"></fileset>
+						<fileset dir="../tests/APAC Scenario"></fileset>
+			</Run-Test-Case>
+		</parallel>
+
+		<Run-Test-Case provarHome="${provar.home}" 
+				projectPath="${testproject.home}" 
+				resultsPath="${testproject.results}/results4" 
+				resultsPathDisposition="Replace" 
+				testEnvironment="" 
+				webBrowser="Chrome_Headless" 
+				webBrowserConfiguration="1920x1080"
+				webBrowserProviderName="Desktop"
+				webBrowserDeviceName="1920x1080" 
+				excludeCallableTestCases="true" 
+				salesforceMetadataCache="Reload" 
+				projectCachePath="../../.provarCache04" 
+				testOutputlevel="INFO" 
+				pluginOutputlevel="INFO"
+				stopTestRunOnError="false"
+	        		testCyclePath="${testcycle.path}"
+    	    			testCycleRunType="FAILURES_AND_SKIPPED"
+				dontFailBuild="true"
+				invokeTestRunMonitor="false"
+				>
+					<fileset dir="../tests"><include name="HBT_TC6d_SEALevelApprovalProcess.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC4_Fire_OpportunityDeepClone.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC_Deep Clone on Quote.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC10_CoreOpp_fromPtnrAcct.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC11_RROpp_NP_ClseWon_NoSEA.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC14_Acct_AcctPlan_Reject.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC15_Acct_TerrPlan_Reject.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC16_CoreOpp_Project.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC18_NewCampaign_AddLead.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC19_NewLead_AddCamp_UpdtLd.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC1a_StdAcct_HubDun_NewCntc.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC1b_StdAcct_NewOpp_NewCase.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC1c_StdAcct_NewTeam_NewPrj.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC2_Acct_NewAcctPlan_Appr.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC3_Acct_NewTerrPlan_Appr.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC04_NewStdAcct_Manual.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC6a_CoreOpp_SAcct_TPC.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC6b_Opp_Prod_noSEA_ClsErr.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC6c_Opp_Contact_Quote.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC7_CoreOpp_fromStdAcct.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC8_CoreOpp_fromCntc.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC9_NewOpp_RunRate.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC12_Opp_ProdAER_ClsLost.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC_Adding_Team_member_Contact.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC24_NewFund_MDF_Claim_Appr.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC25_E2E_HBT_Sales_Flow.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC26_ListingAndExclusionScenario.testcase"/></fileset>
+					<fileset dir="../tests"><include name="HBT_TC01_R2_Profile_Creation.testcase"/></fileset>
+					<fileset dir="../tests/Lead Conversion"></fileset>
+					<fileset dir="../tests/HBS"></fileset>
+					<fileset dir="../tests/EP Scenario"></fileset>
+					<fileset dir="../tests/APAC Scenario"></fileset>			
+		</Run-Test-Case>
+		
+		<Test-Cycle-Report provarHome="${provar.home}"
+				projectPath="${testproject.home}" 
+	        	testCyclePath="${testcycle.path}"
+				reportPath="${testcycle.path}/Report.pdf"
+				failBuildIfFailures="true"
+				invokeTestRunMonitor="true"
+				>
+			<emailProperties sendEmail="true" primaryRecipients="Bakkaravalli.Anirudha@Honeywell.com, Nitin.Sharma5@Honeywell.com" ccRecipients="Bijo.Stephen@Honeywell.com" bccRecipients="Nitin.Sharma5@Honeywell.com" emailSubject="Provar Test Run Report - HBT Sales BTfull PARALLEL" attachExecutionReport="true" attachZip="false"/>
+			<attachmentProperties includeAllFailuresInSummary="true" includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="true" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
+		</Test-Cycle-Report>
+	</target>
+	
+</project>

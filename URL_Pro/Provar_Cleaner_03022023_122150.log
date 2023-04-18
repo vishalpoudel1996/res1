@@ -1,0 +1,20 @@
+Created Date : 03-02-2023
+Created Time : 12:21:49
+
+ Pageobject Location : C:\Users\vishal.poudel\Provar\URLTest\URL_Pro\src\pageobjects\LoanApplicationEc.java
+
+ Pageobject Name : LoanApplicationEc.java
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q1. Business overview']/parent::h1/following-sibling::div[1]")
+	public WebElement Q1;
+
+
+ Pageobject Location : C:\Users\vishal.poudel\Provar\URLTest\URL_Pro\src\pageobjects\VerifyDownloadedFile.java
+
+ Pageobject Name : VerifyDownloadedFile.java
+
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class, 'active') and contains(@class, 'open') and (contains(@class, 'forceModal') or contains(@class, 'uiModal'))][last()]//button[normalize-space(.)='Next']")
+	public WebElement __;
+

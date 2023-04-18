@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testProject selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop">
+  <title>/URL_Pro/.testproject</title>
+  <configPath>config</configPath>
+  <testsPath>tests</testsPath>
+  <testPlansPath>plans</testPlansPath>
+  <templatesPath>templates</templatesPath>
+  <sourcePath>src</sourcePath>
+  <secureStoragePath>.secrets</secureStoragePath>
+  <browserDebugPort>0</browserDebugPort>
+  <environments>
+    <environment name="env1">
+      <summary/>
+    </environment>
+    <environment name="env2">
+      <summary/>
+    </environment>
+  </environments>
+  <variables>
+    <testVariable name="gg">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">gdg</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="_webDriverLogFile">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">C:\\Users\\vishal.poudel\\Provar\\URLTest\\URL_Pro\\templates\\logs.txt</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+  </variables>
+  <connectionClasses>
+    <connectionClass name="ui">
+      <connections>
+        <connection id="61c60f0a-a6b7-4195-afb1-ef895cad5b7f" name="connurl">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://mijnpostnl--amtest.sandbox.my.site.com/mpnl/s/klant-worden?language=nl_NL#/"/>
+          </connectionUrls>
+        </connection>
+        <connection id="76c36e9c-5298-4672-adea-fd62ff386b81" name="googleurl">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://google.com"/>
+          </connectionUrls>
+        </connection>
+        <connection id="63499e36-1034-41fa-9a01-045b76909a8a" name="drag_drop">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://demo.guru99.com/test/drag_drop.html"/>
+          </connectionUrls>
+        </connection>
+        <connection id="9728b303-84e2-4353-8a08-f44cebc1260f" name="table">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://www.w3schools.com/html/html_tables.asp"/>
+          </connectionUrls>
+        </connection>
+        <connection id="e383128b-4f84-4ab9-88d2-eb87c32577f2" name="amazon">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://amazon.in"/>
+          </connectionUrls>
+        </connection>
+        <connection name="redirect">
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="2a583a8b-5815-4a63-bb5f-9a4f04b574d4" url="se:baseUrl=https://www.browserstack.com/guide/handling-tabs-in-selenium"/>
+          </connectionUrls>
+        </connection>
+        <connection name="googlepage">
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="1594e95a-1cd2-4824-ae7b-4123cf07eb5e" url="se:baseUrl=http://google.com"/>
+          </connectionUrls>
+        </connection>
+        <connection name="popuplink">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="d0c9a950-9beb-4425-be7e-2ded9ead9ecb" url="se:baseUrl=https://admin:admin@uat.avigilon.com/partners"/>
+          </connectionUrls>
+        </connection>
+        <connection id="159a6928-d2b8-49d0-9188-651dc5adab6c" name="herocuppopup">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=https://the-internet.herokuapp.com/basic_auth"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="sf">
+      <connections>
+        <connection id="6751aac4-c7c7-4864-abc7-a1fe7d00f908" name="conn1">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="313251f8-4406-4137-afad-21c2f472f95f" url="sf:user=vishal@provartesting.com;password={password};environment=PROD_DEV;ssoConnection=sso;lightningMode=true"/>
+            <connectionUrl envName="env2" secureStorageNodeId="306fc736-931a-45aa-8953-a82e69dbca7f" url="sf:user=vishal@provartesting.com;password={password};environment=PROD_DEV;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="2a0be5ea-875d-48ff-a618-3caccc6de100" name="jwtTest">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="ae1aea11-852a-424d-bce7-a6d77ea7aac5" url="sf:environment=PROD_DEV;apiLoginUrl=https://d2x000000d6h3eac-dev-ed.my.salesforce.com;identityServiceUrl=https://login.salesforce.com/id/00D2x000000D6h3EAC/0052x000000lEcAAAU;clientId={clientId};lightningMode=true;authenticationType=OAUTH_JWT;callbackUrl={callbackUrl};accessToken={accessToken};jwtCertLocation=templates/00D2x000000D6h3.jks;jwtUsername=vishal@provartesting.com;jwtPassword={jwtPassword};jwtCertAlias=provarJWTTest;jwtCertType=JKS"/>
+          </connectionUrls>
+        </connection>
+        <connection id="dce823c1-0565-44ee-a034-c0e48f83b363" name="jwtFlow">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="1c874fa5-eb54-4860-b402-165b54c7659e" url="sf:environment=PROD_DEV;apiLoginUrl=https://d2x000000d6h3eac-dev-ed.my.salesforce.com;identityServiceUrl=https://login.salesforce.com/id/00D2x000000D6h3EAC/0052x000000lEcAAAU;clientId={clientId};clientSecret={clientSecret};lightningMode=true;authenticationType=OAUTH;callbackUrl={callbackUrl};accessToken={accessToken}"/>
+          </connectionUrls>
+        </connection>
+        <connection name="conn2">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="dc88d328-2963-4336-ab11-d2f9c6bfcdf1" url="sf:user=vishal@provartesting.com;password={password};environment=PROD_DEV;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection id="42a2f65b-a0c1-440c-bd26-c0051f9fb24b" name="personalGmail">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="3bd742d9-3206-46da-873b-4c402689bbcf" url="google:user=vishalpoudel96@gmail.com;password={password};authenticationType=PASSWORD"/>
+          </connectionUrls>
+        </connection>
+        <connection id="a305488c-14d6-4819-9de4-38f158a06d51" name="ProvarGMail">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="543b42ab-5e3a-44c6-85bc-e57634cdc883" url="google:user=vishal.poudel@provartesting.com;password={password};authenticationType=PASSWORD"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="sso">
+      <connections>
+        <connection id="24f76515-ea44-496d-b812-89f23a1aeaf3" name="sso">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sso:generic:pageObject=SSOFile;baseUrl=https://login.salesforce.com;debug=true"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+  </connectionClasses>
+  <tagTypes>
+    <tagType name="owner" tagClass="owner" title="Business Owner">
+      <summary>The person or team that owns a Test Case on the business side</summary>
+      <tags>
+        <tag name="tagBO">
+          <summary>business owner</summary>
+        </tag>
+        <tag name="aa">
+          <summary>aa</summary>
+        </tag>
+        <tag name="shankar">
+          <summary/>
+        </tag>
+      </tags>
+    </tagType>
+    <tagType name="functionalarea" tagClass="functionalarea" title="Functional Area">
+      <summary>The functional area that a Test Item belongs to</summary>
+      <tags>
+        <tag name="TagFA">
+          <summary>functional</summary>
+        </tag>
+      </tags>
+    </tagType>
+  </tagTypes>
+  <browserConfigurations>
+    <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
+      <summary>Full screen with Test Builder adjustment</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1024" browserWidthType="Pixels" name="1024x768">
+      <summary>Fixed 1024x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="800" browserHeightType="Pixels" browserWidth="1280" browserWidthType="Pixels" name="1280x800">
+      <summary>Fixed 1280x800</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1366" browserWidthType="Pixels" name="1366x768">
+      <summary>Fixed 1366x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="1080" browserHeightType="Pixels" browserWidth="1920" browserWidthType="Pixels" name="1920x1080">
+      <summary>Fixed 1920x1080</summary>
+    </browserConfiguration>
+  </browserConfigurations>
+  <browserApplications>
+    <browserApplication connectionTypes="sf" name="Salesforce1">
+      <properties>
+        <browserPlatformProperty name="browserName" platform="IOS" type="DesiredCapability" value="Safari"/>
+        <browserPlatformProperty name="browserName" platform="ANDROID" type="DesiredCapability" value="Chrome"/>
+      </properties>
+    </browserApplication>
+    <browserApplication connectionTypes="sf" name="ServiceMax FSA">
+      <properties>
+        <browserPlatformProperty name="bundleId" platform="IOS" type="DesiredCapability" value="com.servicemaxinc.svmxfieldserviceapp"/>
+        <browserPlatformProperty name="app" platform="DESKTOP" type="DesiredCapability" value="C:\\Program Files\\ServiceMax\\ServiceMax Field Service\\Laptop Mobile.exe"/>
+      </properties>
+    </browserApplication>
+  </browserApplications>
+  <browserProviders>
+    <browserProvider name="Desktop" type="SeleniumLocal">
+      <devices>
+        <browserProviderDevice name="Full Screen">
+          <properties>
+            <browserPlatformProperty name="summary" value="Full screen with Test Builder adjustment"/>
+            <browserPlatformProperty name="browserHeightType" value="Full"/>
+            <browserPlatformProperty name="browserWidthType" value="Full"/>
+            <browserPlatformProperty name="adjustBrowserWidthForChromeIde" value="true"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1024x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1024x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1024"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1280x800">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1280x800"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="800"/>
+            <browserPlatformProperty name="browserWidth" value="1280"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1366x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1366x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1366"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1920x1080">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1920x1080"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="1080"/>
+            <browserPlatformProperty name="browserWidth" value="1920"/>
+          </properties>
+        </browserProviderDevice>
+      </devices>
+    </browserProvider>
+  </browserProviders>
+</testProject>

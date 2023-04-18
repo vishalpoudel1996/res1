@@ -1,0 +1,2190 @@
+Created Date : 03-02-2023
+Created Time : 12:20:46
+
+ Pageobject Location : C:\Users\vishal.poudel\Provar\URLTest\URL_Pro\src\pageobjects\LoanAppEc.java
+
+ Pageobject Name : LoanAppEc.java
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='About your business']")
+	public WebElement Page2AboutYourBusinessLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q1. Business overview:']")
+	public WebElement Q1BusinessOverviewLabel;
+
+	@TextType()
+	@FindByLabel(label = "Q1. Business overview:")
+	public WebElement q1BusinessOverviewTxtbox;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q2. How would you describe the current level of technology maturity or readiness of the products or services of your business?']")
+	public WebElement Q2TechnologyMaturityLabel;
+
+	@BooleanType()
+	@FindByLabel(label = "Minimum viable product (approximate technology readiness level 5-7)")
+	public WebElement Q2TechMaturity_MVPLevel57;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q3. How would you describe your current level of manufacturing or service delivery maturity or readiness of your business?']")
+	public WebElement Q3ManufacturingServiceMaturityLabel;
+
+	@BooleanType()
+	@FindByLabel(label = "Stable and deployed product")
+	public WebElement Q3OptionstableAndDeployedProduct;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q4. How would you describe the current level of commercial readiness or maturity of your business?']")
+	public WebElement Q4CommercialReadinessLabel;
+
+	@BooleanType()
+	@FindByLabel(label = "Turnover of more than £5 million per annum and globally deployed")
+	public WebElement Q4OptionTurnovermorethan5mil;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q5. Which type of customer or client do you target? (Select all applicable)']")
+	public WebElement Q5CutomerClientTargetLabel;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='Mid Sized Companies']")
+	public WebElement Q5OptionMidsizedCompanies;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q6. What is your target long term business model or main revenue channel?']")
+	public WebElement Q6TargetLongTermBusinessModelLabel;
+
+	@BooleanType()
+	@FindByLabel(label = "Retail sales (physical purchase or resale)")
+	public WebElement Q6OptionRetailSales;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q6a. If other please type below:']")
+	public WebElement Q6aOther;
+
+	@TextType()
+	@FindByLabel(label = "Q6a. If other please type below:")
+	public WebElement q6AIfOtherPleaseTypeBelow;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Next']")
+	public WebElement Next;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Previous']")
+	public WebElement previous;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Go to Summary']")
+	public WebElement goToSummary;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q8a. When did you incorporate your business?']")
+	public WebElement Q8aIncorporateDateLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q8b. When did you start to develop your core technology?']")
+	public WebElement Q8bStartDevelopCoreTechLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q8c. When did you (or do you expect to) start sales operations?']")
+	public WebElement Q8cStartSalesOperationsLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q8d. When did you (or do you expect to) sign your first commercial client/customer contract?']")
+	public WebElement Q8dSignFirstCommercialContractLabel;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-date').shadowRoot.querySelector('input')")
+	public WebElement Q8aDay;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-date').shadowRoot.querySelectorAll('input')[1]")
+	public WebElement Q8aMonth;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-date').shadowRoot.querySelectorAll('input')[2]")
+	public WebElement Q8aYear;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[1].shadowRoot.querySelector('input')")
+	public WebElement Q8bDay;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[1].shadowRoot.querySelectorAll('input')[1]")
+	public WebElement Q8bMonth;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[1].shadowRoot.querySelectorAll('input')[2]")
+	public WebElement Q8bYear;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[2].shadowRoot.querySelector('input')")
+	public WebElement Q8cDay;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[2].shadowRoot.querySelectorAll('input')[1]")
+	public WebElement Q8cMonth;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[2].shadowRoot.querySelectorAll('input')[2]")
+	public WebElement Q8cYear;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[3].shadowRoot.querySelector('input')")
+	public WebElement Q8dDay;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[3].shadowRoot.querySelectorAll('input')[1]")
+	public WebElement Q8dMonth;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-date')[3].shadowRoot.querySelectorAll('input')[2]")
+	public WebElement Q8dYear;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Loan request information']")
+	public WebElement LoanRequestInformationLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q11. What is the amount of loan that you need?Q11. What is the amount of loan that you need?']")
+	public WebElement Q11LoanAmountLabel;
+
+	@TextType()
+	@FindByLabel(label = "Q11. What is the amount of loan that you need?")
+	public WebElement q11WhatIsTheAmountOfLoanThatYouNeed;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q12. What is the length of your requested availability period in months?']")
+	public WebElement Q12LengthAvailabityPeriod;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Q12. What is the length of your requested availability period in months?")
+	public WebElement q12WhatIsTheLengthOfYourRequestedAvailabilityPeriodInMonths;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q13. What is the length of your requested extension period in months?']")
+	public WebElement Q13LengthOfExtensionPeriod;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Q13. What is the length of your requested extension period in months?")
+	public WebElement q13WhatIsTheLengthOfYourRequestedExtensionPeriodInMonths;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q14. What is the length of your requested repayment period in months?']")
+	public WebElement Q14LengthOfRepaymentPeriod;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Q14. What is the length of your requested repayment period in months?")
+	public WebElement q14WhatIsTheLengthOfYourRequestedRepaymentPeriodInMonths;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q15. Total length of your requested loan in months:']")
+	public WebElement Q15TotalLenghOfLoanInMonths;
+
+	@TextType()
+	@FindBy(xpath = "//p[normalize-space(.)='Total term in months should not be greater than 84.']")
+	public WebElement TotalTermInMonthsNotGreaterThan84Label;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-markup-text')[1].shadowRoot.querySelector('b')")
+	public WebElement Q15LengthOfLoanCalculatedValue;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q16. Please indicate your proposed quarterly drawdown schedule during the availability period to fund the eligible costs of your project.']")
+	public WebElement Q16ProposedQuarterlyDrawdownScheduleLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='16a. Drawdown 116a. Drawdown 1']")
+	public WebElement Q16aDrawdown1Label;
+
+	@TextType()
+	@FindByLabel(label = "16a. Drawdown 1")
+	public WebElement Q16ADrawdown1;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q17. Explain and justify the requested loan period.']")
+	public WebElement Q17JustifyLoanPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Explain and justify the requested loan period, noting how this forms part of the project and business requirements, taking into consideration how long it will take you to carry out your R&D activities, reach commercialisation and repay your loan, within the context of the maximum permitted periods for the loan.']")
+	public WebElement Q17JustifyLoanPeriodText;
+
+	@TextType()
+	@FindByLabel(label = "Q17. Explain and justify the requested loan period.")
+	public WebElement q17ExplainAndJustifyTheRequestedLoanPeriod;
+
+
+ Pageobject Location : C:\Users\vishal.poudel\Provar\URLTest\URL_Pro\src\pageobjects\LoanApplicationEc.java
+
+ Pageobject Name : LoanApplicationEc.java
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Check your answers']")
+	public WebElement CheckYourAnswersLabel;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='About your business']")
+	public WebElement AboutYourBusinessLabel;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q1. Business overview']")
+	public WebElement Q1onSummary;
+
+	@TextType()
+		@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[0]")
+	public WebElement Q1OnSummaryAnswer;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q1. Business overview')]/ancestor::div/dd/a")
+	public WebElement changeQ1BusinessOverview;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q2. Technology readiness']")
+	public WebElement Q2OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[2]")
+	public WebElement Q2OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q3. Manufacturing or service readiness']")
+	public WebElement Q3OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[4]")
+	public WebElement Q3onSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q4. Commercial readiness']")
+	public WebElement Q4OnSummaryPage;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[6]")
+	public WebElement Q4OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q5. Target customers']")
+	public WebElement Q5OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[8]")
+	public WebElement Q5OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q6. Target business model']")
+	public WebElement Q6OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[10]")
+	public WebElement Q6OnSummarySummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q6a. Business Model - Other']")
+	public WebElement Q6OnSummary1;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[12]")
+	public WebElement Q6aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q8a. Incorporation Date']")
+	public WebElement Q8aOnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[14]")
+	public WebElement Q8aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q8b. Date of Technical Developments']")
+	public WebElement Q8bOnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[16]")
+	public WebElement Q8bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q8c. Date of Sales Operations']")
+	public WebElement Q8cOnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[18]")
+	public WebElement Q8cOnSummaryAnswer;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dt')[10]")
+	public WebElement Q8dOnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-summary').shadowRoot.querySelectorAll('dd')[20]")
+	public WebElement Q8dOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Loan request information']")
+	public WebElement LoanRequestInformationLabel;
+
+	@FindBy(xpath = "//label[contains(text(),'Q11. Requested Loan Amount ')]")
+	public WebElement Q11OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-summary')[1].shadowRoot.querySelector('dd')")
+	public WebElement Q11OnSummaryAnswer;
+
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='ChangeQ11. Requested Loan Amount' or normalize-space(.)='Change Q11. Requested loan amount']")
+	public WebElement changeQ11RequestedLoanAmount;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q12. Requested Availability Period']")
+	public WebElement Q12OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-summary')[1].shadowRoot.querySelectorAll('dd')[2]")
+	public WebElement Q12OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q13. Requested Extension Period']")
+	public WebElement Q13OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-summary')[1].shadowRoot.querySelectorAll('dd')[4]")
+	public WebElement Q13OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q14. Requested Repayment Period']")
+	public WebElement Q14OnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-summary')[1].shadowRoot.querySelectorAll('dd')[6]")
+	public WebElement Q14OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='16a. Drawdown 1']")
+	public WebElement Q16aOnSummary;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-summary')[1].shadowRoot.querySelectorAll('dd')[8]")
+	public WebElement Q16aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='16b. Drawdown 2']")
+	public WebElement Q16bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='16b. Drawdown 2']/following::dd[1]")
+	public WebElement Q16bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='16c. Drawdown 3']")
+	public WebElement Q16cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='16c. Drawdown 3']/following::dd[1]")
+	public WebElement Q16cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q17. Justification for Loan Period']")
+	public WebElement Q17OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q17. Justification for Loan Period']/following::dd[1]")
+	public WebElement Q17OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Management and Ownership']")
+	public WebElement ManagementAndOwnershipLabel;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q18. Management team']")
+	public WebElement Q18OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q18. Management team']/following::dd[1]")
+	public WebElement Q18OnSummaryAnswer;
+
+	@FindBy(xpath = "//div/dt[text()='Q18. Management team']/ancestor::div/dd/a")
+	public WebElement changeQ18ManagementTeam;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q30. Board of directors')]/ancestor::div/dd/a")
+	public WebElement changeQ30BoardofDirectors;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Review and Submit' or normalize-space(.)='Review and submit']")
+	public WebElement reviewAndSubmit;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Submit Business & Financial Information']")
+	public WebElement submitBusinessAndFinancialInformation;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-markup-text')[2].shadowRoot.querySelector('span')")
+	public WebElement MandatoryFieldMissingErrorText;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-markup-text')[3].shadowRoot.querySelector('span')")
+	public WebElement MandatoryFieldMissingErrorText1;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 2 of 15']")
+	public WebElement Page2Of15;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='About your business']")
+	public WebElement AboutYourBusiness;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q1. Business overview']")
+	public WebElement Q1BusinessOverview;
+
+	@TextType()
+	@FindByLabel(label = "Q1. Business overview")
+	public WebElement q1BusinessOverview;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q2. Technology readiness']")
+	public WebElement Q2TechnologyReadinessLabel;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-radios').shadowRoot.querySelectorAll('div')[2]")
+	public WebElement q2TechnologyReadiness;
+
+	@BooleanType()
+	@FindByLabel(label = "Functional prototype (approximate technology readiness level 4-6)")
+	public WebElement Q2AnswerfunctionalPrototype;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q3. Manufacturing or service readiness']")
+	public WebElement Q3ManufacturingorServiceReadiness;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q3. Manufacturing or service readiness']/parent::legend/following-sibling::div[1]")
+	public WebElement q3ManufacturingOrServiceReadiness;
+
+	@BooleanType()
+	@FindByLabel(label = "Stable and deployed product")
+	public WebElement Q3AnswerstableAndDeployedProduct;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q4. Commercial readiness']")
+	public WebElement Q4CommercialReadiness;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q4. Commercial readiness']/parent::legend/following-sibling::div[1]")
+	public WebElement q4CommercialReadiness;
+
+	@BooleanType()
+	@FindByLabel(label = "Turnover of more than £5 million per annum and globally deployed")
+	public WebElement Q4AnswerturnoverOfMoreThan5Million;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q5. Target customers']")
+	public WebElement Q5TargetCustomers;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q5. Target customers']/parent::legend/following-sibling::div[1]")
+	public WebElement q5TargetCustomers;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='Mid Sized Companies']")
+	public WebElement Q5TargetCustomersAnswerMidSizeCompanies;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q6. Target business model']")
+	public WebElement Q6TargetBusinessModel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q6. Target business model']/parent::legend/following-sibling::div[1]")
+	public WebElement q6TargetBusinessModel;
+
+	@BooleanType()
+	@FindByLabel(label = "Retail sales (physical purchase or resale)")
+	public WebElement Q6TargetBusinessModelAnsRetailSales;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q6a. Business Model - Other']")
+	public WebElement Q6aBusinessModelOther;
+
+	@TextType()
+	@FindByLabel(label = "Q6a. Business Model - Other")
+	public WebElement q6ABusinessModelOther;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Previous']")
+	public WebElement previous;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Save and continue']")
+	public WebElement saveAndContinue;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Loan request information']")
+	public WebElement LoanRequestInformationLabel1;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q11. Requested Loan AmountQ11. Requested Loan Amount']")
+	public WebElement Q11RequestedLoanAmount;
+
+	@FindBy(xpath = "//div[contains(text(),'What is the amount of loan that you need?')]")
+	public WebElement Q11Text;
+
+	@TextType()
+	@FindByLabel(label = "Q11. Requested Loan Amount")
+	public WebElement q11RequestedLoanAmount;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q12. Requested Availability Period']")
+	public WebElement Q12RequestedAvailabilityPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the length of your requested availability period in months? The availability period is the R&D phase of your project. During this period, you can draw down your loan quarterly in advance to fund eligible costs of R&D for your project. Please ensure that this period meets the terms set out in the competition guidelines.']")
+	public WebElement Q12Text;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Q12. Requested Availability Period")
+	public WebElement q12RequestedAvailabilityPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q13. Requested Extension Period']")
+	public WebElement Q13RequestedExtensionPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the length of your requested extension period in months? The extension period is the pre-commercial phase of your project. Please ensure that this period meets the terms set out in the competition guidelines.']")
+	public WebElement Q13Text;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Q13. Requested Extension Period")
+	public WebElement q13RequestedExtensionPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q14. Requested Repayment Period']")
+	public WebElement Q14RequestedRepaymentPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the length of your requested repayment period in months? Please ensure that the repayment period meets the terms set out in the competition guidelines.']")
+	public WebElement Q14Text;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Q14. Requested Repayment Period")
+	public WebElement q14RequestedRepaymentPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q15. Total Term Requested']")
+	public WebElement Q15TotalTermRequested;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-markup-text')[1].shadowRoot.querySelector('b')")
+	public WebElement TotalTermRequestedValue;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Error:Your availability, extension and repayment periods added together exceed the total loan term set out in the competition brief.']")
+	public WebElement TotalTermExceedErrorText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 5 of 15']")
+	public WebElement Pag5of15;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q16. Proposed drawdown schedule']")
+	public WebElement Q16ProposedDrawDownSchedule;
+
+	@TextType()
+	@FindBy(xpath = "//p[normalize-space(.)='Indicate your proposed quarterly drawdown schedule during the availability period to fund the eligible costs of your project.']")
+	public WebElement Q16Text;
+
+	@TextType()
+	@FindBy(xpath = "//label[starts-with(normalize-space(.),'16a. Drawdown 1')]")
+	public WebElement Q16aDrawDown1;
+
+	@TextType()
+	@FindByLabel(label = "16a. Drawdown 1")
+	public WebElement _16ADrawdown1;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(normalize-space(.),'16b. Drawdown 2')]")
+	public WebElement Q16bDrawdown2;
+
+	@TextType()
+	@FindByLabel(label = "16b. Drawdown 2")
+	public WebElement _16BDrawdown2;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(normalize-space(.),'16c. Drawdown 3')]")
+	public WebElement Q16cDrawdown3;
+
+	@TextType()
+	@FindByLabel(label = "16c. Drawdown 3")
+	public WebElement _16CDrawdown3;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q17. Justification for Loan Period']")
+	public WebElement Q17JustificationForLoanPeriod;
+
+	@TextType()
+	@FindByLabel(label = "Q17. Justification for Loan Period")
+	public WebElement q17JustificationForLoanPeriod;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Error:Total drawdowns amount should be equal to requested loan amount £75,000.']")
+	public WebElement TotalDrawdownValidationErrorText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 6 of 15']")
+	public WebElement Page6of15;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Management and Ownership']")
+	public WebElement ManagementAndOwnershipLabel1;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q18. Management team']")
+	public WebElement Q18ManagementTeam;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Set out who is in the senior management team of your business. Describe the experience and expertise of the senior management team and demonstrate that they meet the strategic operational, commercial and financial needs of the business. Describe how any gaps in the team are to be filled. Describe how the senior management team is structured or organised.']")
+	public WebElement Q18Text;
+
+	//@FindBy(xpath = "//div/dt[text()='Q18. Management team']/ancestor::div/dd/a")
+	public WebElement q18ManagementTeam;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q19. Ownership of the business']")
+	public WebElement Q19OwnershipoftheBusiness;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Set out who the owners of the business are. Describe the structure of the ownership or shareholdings. Identify all shareholders who own 20% or more of the company or who are registered as ‘persons of significant control’ at Companies House.']")
+	public WebElement Q19Text;
+
+	@TextType()
+	@FindByLabel(label = "Q19. Ownership of the business")
+	public WebElement q19OwnershipOfTheBusiness;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q20. Number of FoundersQ20. Number of Founders']")
+	public WebElement Q20NumOfFounders;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How many founders are still active in the company on a daily basis?']")
+	public WebElement Q20Text;
+
+	@FindBy(xpath = "//label[contains(text(),'Q20. Number of Founders')]/ancestor::div/div/input")
+	public WebElement q20NumberOfFounders;
+
+	@FindBy(xpath = "//label[contains(text(),'Q21a. Number of Employees 1 year ago')]")
+	public WebElement Q21aNumOfEmployee1YearAgo;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the total number of staff employed by the company 1 year ago. (excluding interns, freelancers and contractors) (Number only)']")
+	public WebElement Q21aText;
+
+	@TextType()
+	@FindByLabel(label = "Q21a. Number of Employees 1 year ago")
+	public WebElement q21ANumberOfEmployees1YearAgo;
+
+	@FindBy(xpath = "//label[contains(text(),'Q21b. Number of Employees today')]")
+	public WebElement Q21bNumOFEmployeesToday;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the total number of staff employed by the company today. (excluding interns, freelancers and contractors) (Number only)']")
+	public WebElement Q21bText;
+
+	@TextType()
+	@FindByLabel(label = "Q21b. Number of Employees today")
+	public WebElement q21BNumberOfEmployeesToday;
+
+	@FindBy(xpath = "//label[contains(text(),'Q22. Current Offices')]")
+	public WebElement Q22CurrentOffices;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='In how many offices around the world are your employees located?']")
+	public WebElement Q22Text;
+
+	@FindBy(xpath = "//label[contains(text(),'Q22. Current Offices')]")
+	public WebElement q22CurrentOffices;
+
+	@FindBy(xpath = "//label[contains(text(),'Q23. Number of Operating Partners')]")
+	public WebElement Q23NumOfOperatingPartners;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How many full-time employees own at least 4% of company shares (excluding company founders)?']")
+	public WebElement Q23Text;
+
+	@TextType()
+	@FindByLabel(label = "Q23. Number of Operating Partners")
+	public WebElement q23NumberOfOperatingPartners;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q24. Availability of Founders and Operating Partners']]")
+	public WebElement Q24AvailabilityOfOperatingPartners;
+
+	@FindBy(xpath = "//div[text()='What is the average availability of founders and operating partners for your project?']")
+	public WebElement Q24Text;
+
+	@BooleanType()
+	@FindByLabel(label = "Half-time (or 50%)")
+	public WebElement Q24halfTimeOr50;
+
+	@FindBy(xpath = "//label[contains(text(),'24a. Availability of Founders and Operating Partners – Other ')]")
+	public WebElement Q24aAvailabilityOfOperatingPartnersOther;
+
+	@FindBy(xpath = "//label[contains(text(),'24a. Availability of Founders and Operating Partners – Other ')]/ancestor::div/div/input")
+	public WebElement _24AAvailabilityOfOperatingPartnersOther;
+
+	@FindBy(xpath = "//h2[contains(text(),'Q25. Entrepreneurial background')]")
+	public WebElement Q25EnterpreneurialBackground;
+
+	@FindBy(xpath = "//label[contains(text(),'Q25.a Founders and Operating Partners who have previously been entrepreneur')]")
+	public WebElement Q25aPartnersPreviousEntrepreneurs;
+
+	@FindBy(xpath = "//label[contains(text(),'Q25.b Founders and Operating Partners with extensive experience')]")
+	public WebElement Q25bPartnersWithExtensiveExperience;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How many have had extensive experience (at least 5 years) in your target market?']")
+	public WebElement Q25bText;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q26. Paid in Capital')]")
+	public WebElement Q26PaidInCapital;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the total amount personally invested by operational partners in the company to date?']")
+	public WebElement q26PaidInCapital;
+
+	@TextType()
+	@FindByLabel(label = "Q26. Paid in Capital")
+	public WebElement q26APaidInCapitalTxtBox;
+
+	@BooleanType()
+	@FindByLabel(label = "£50,000")
+	public WebElement Q26PaidCapital_50000;
+
+	@FindBy(xpath = "//label[contains(text(),'Q26a. Paid in Capital - Other')]")
+	public WebElement Q26aPaidInCapitalOther;
+
+	@TextType()
+	@FindByLabel(label = "Q26a. Paid in Capital - Other")
+	public WebElement q26APaidInCapitalOther;
+
+	@FindBy(xpath = "//label[contains(text(),'Q27. Retained Shares')]")
+	public WebElement Q27RetainShares;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is the total proportion of shares still owned by operational partners? (%)']")
+	public WebElement Q27Text;
+
+	@TextType()
+	@FindByLabel(label = "Q27. Retained Shares")
+	public WebElement q27RetainedShares;
+
+	@BooleanType()
+	@FindByLabel(label = "No")
+	public WebElement Q28_no;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q29. Type of Investors']")
+	public WebElement Q29TypeOfInvestors;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='(If answer to Q28 is yes) How would you describe the type of investors?']")
+	public WebElement q29TypeOfInvestorsText;
+
+	@BooleanType()
+	@FindByLabel(label = "Venture Capital or private Equity funds")
+	public WebElement Q29_ventureCapitalOrPrivateEquityFunds;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 7 of 15']")
+	public WebElement Page7Of15;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 3 of 15']")
+	public WebElement Page3of15;
+
+	@FindBy(xpath = "//label[normalize-space(.)='Q9. Incorporation Date']")
+	public WebElement Q8aIncorporationDate;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='When did you incorporate your business?']")
+	public WebElement q8AIncorporationDateText;
+
+	@FindBy(xpath = "//label[normalize-space(.)='Q10a. Date of Technical Developments']")
+	public WebElement Q8bDateofTechnicalDevelopments;
+
+	@TextType()
+	@FindByLabel(label = "Q10a. Date of Technical Developments")
+	public WebElement q8BDateOfTechnicalDevelopmentsText;
+
+	@FindBy(xpath = "//label[normalize-space(.)='Q10b. Date of Sales Operations']")
+	public WebElement Q8cDateofSalesOperations;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='When did you (or do you expect to) start sales operations?']")
+	public WebElement q8CDateOfSalesOperationsText;
+
+	@FindBy(xpath = "//label[normalize-space(.)='Q10c. First Contract Date']")
+	public WebElement Q8dFirstContractDate;
+
+	@TextType()
+	@FindByLabel(label = "Q10c. First Contract Date")
+	public WebElement q8DFirstContractDateText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Error:Please enter a valid number for the month']")
+	public WebElement MonthValidationErrText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Error:Please enter a valid number for the year']")
+	public WebElement YearValidationErrText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Error:Please enter a valid number for the day']")
+	public WebElement DayValidationErrorText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 4 of 15']")
+	public WebElement Page4of15;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Continue']")
+	public WebElement continue_;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Corporate governance and employees']")
+	public WebElement CorporateGovernanceAndEmployees;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q30. Board of Directors')]")
+	public WebElement Q30BoardofDirectors;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Does your company have a Board of Directors?']")
+	public WebElement Q30Text;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='doesCompanyBoardDirectorsID' and @value='Yes']")
+	public WebElement Q30_yes;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q31.Frequency of Board Meetings']")
+	public WebElement Q31FrequencyOfBoardMeetings;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='(If answer for Q30 is yes) How often do Board of Directors meetings take place?']")
+	public WebElement q31FrequencyOfBoardMeetingsText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='frequencyOfBoardMeetingsID' and @value='Monthly']")
+	public WebElement Q31_monthly;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q32. Advisory Board']")
+	public WebElement Q32AdvisoryBoard;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Does your company have an Advisory Board?']")
+	public WebElement q32AdvisoryBoardText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='doesCompanyAdvisoryBoardID' and @value='Yes']")
+	public WebElement Q32_yes;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q33. Frequency of Advisory Board Meetings']")
+	public WebElement Q33FrequencyofAdvisoryBoardMeetings;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='(If answer for Q32 is yes) How often do Advisory Board meetings take place?']")
+	public WebElement q33FrequencyOfAdvisoryBoardMeetingsText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='freqAdvisoryBoardMeetingsID' and @value='Annually']")
+	public WebElement Q33_Annually;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q34. Technical Hiring Confidence Level']")
+	public WebElement Q34TechnicalHiringConfidenceLevel;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='From 1 (low) to 5 (high), how would you rate your confidence and ability to recruit the right candidates with necessary skills and experience into technical roles?']")
+	public WebElement q34TechnicalHiringConfidenceLevelText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='techHiringConfidencelevelID' and @value='2']")
+	public WebElement Q34_2;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q35. Sales Hiring Confidence Level']")
+	public WebElement Q35SalesHirinigConfidenceLevel;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='From 1 (low) to 5 (high), how would you rate your confidence and ability to recruit the right candidates and skills into sales and marketing roles?']")
+	public WebElement q35SalesHiringConfidenceLevelText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='hiringConfidencelevelSalesID' and @value='4']")
+	public WebElement Q35_4;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q36. Other Hiring Confidence Level']")
+	public WebElement Q36OtherHiringConfidenceLevel;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='From 1 (low) to 5 (high), how would you rate your confidence and ability to recruit the right candidates and skills into other roles (e.g., HR, finance, operations, legal or admin)?']")
+	public WebElement q36OtherHiringConfidenceLevelText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='otherHiringConfidenceLevelID' and @value='4']")
+	public WebElement Q36_4;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q37. Time for New Joiners']")
+	public WebElement Q37TimeforNewJoiners;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Based on previous hires, how long does it typically take between a job offer being made and a newcomer joining the company?']")
+	public WebElement q37TimeForNewJoinersText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='timeBetweenJobOfferStartDateID' and @value='7-9 months']")
+	public WebElement Q37_79Months;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q38a. Total Hires in next 12 monthsQ38a. Total Hires in next 12 months']")
+	public WebElement Q38aTotalHiredinNext12Months;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How many full-time employees do you plan to recruit in the next 12 months?']")
+	public WebElement Q38aText;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q38b. Total Hires in next 2 years')]")
+	public WebElement Q38bTotalHiresInNext2Years;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How many full-time employees do you plan to recruit in the next 24 months ? (including above)?']")
+	public WebElement Q38bText;
+
+	@TextType()
+	@FindByLabel(label = "Q38b. Total Hires in next 2 years")
+	public WebElement q38BTotalHiresInNext2Years;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q39. International Offices']")
+	public WebElement Q39InternationalOffices;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How many international offices do you plan on opening in next 2 years?']")
+	public WebElement q39InternationalOfficesText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='IntnlOfficeOpenings2yearsID' and @value='2']")
+	public WebElement Q39_2;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 8 of 15']")
+	public WebElement Page8Of15;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q40. Business plan overview')]/ancestor::div/dd/a")
+	public WebElement changeQ40BusinessPlanOverview;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Commercial Activity']")
+	public WebElement CommercialActivityLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q40. Business Plan Overview']")
+	public WebElement Q40BusinessPlanOverView;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What is your current business plan and how will it be impacted by this project?']")
+	public WebElement Q40Text;
+
+	@TextType()
+	@FindByLabel(label = "Q40. Business Plan Overview")
+	public WebElement q40BusinessPlanOverview;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q41. Monthly revenues']")
+	public WebElement Q41MonthlyRevenues;
+
+	@TextType()
+	@FindBy(xpath = "//p[normalize-space(.)='Provide monthly revenue figures for the following time periods (in £, numbers only). You should ensure that these match with historic and forecasts revenues shown in your financial spreadsheet.']")
+	public WebElement Q41Text;
+
+	@TextType()
+	@FindByLabel(label = "1 year ago")
+	public WebElement Q41_1YearAgo;
+
+	@TextType()
+	@FindByLabel(label = "Last month")
+	public WebElement Q41_lastMonthRevenue;
+
+	@TextType()
+	@FindByLabel(label = "Target in 2 years")
+	public WebElement Q41_targetIn2Years;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q42. Average Monthly Variable Costs')]")
+	public WebElement Q42AverageMonthlyVaribaleCosts;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='In the last quarter, what was the monthly average of variable costs?']")
+	public WebElement Q42Text;
+
+	@TextType()
+	@FindByLabel(label = "Q42. Average Monthly Variable Costs")
+	public WebElement q42AverageMonthlyVariableCosts;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q43. Average Monthly Fixed Costs')]")
+	public WebElement Q43AverageMonthlyFixedCosts;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='In the last quarter, what was the monthly average of fixed costs, including employees?']")
+	public WebElement Q43Text;
+
+	@TextType()
+	@FindByLabel(label = "Q43. Average Monthly Fixed Costs")
+	public WebElement q43AverageMonthlyFixedCosts;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q44. Expected Breakeven Point']")
+	public WebElement Q44ExpectedBreakevenpoint;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='When do you plan to breakeven?']")
+	public WebElement Q44Text;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='ExpectedBreakevenPointID' and @value='In the next 12 months']")
+	public WebElement Q44_inTheNext12Months;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q45. Customers and users']")
+	public WebElement Q45CustomersAndUsers;
+
+	@TextType()
+	@FindBy(xpath = "//p[normalize-space(.)='Provide figures for the numbers of paying customers or users for the following time periods. You should ensure that these match with sales assumptions shown in your financial spreadsheet.']")
+	public WebElement Q45Text;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-text-input')[5].shadowRoot.querySelector('input')")
+	public WebElement Q45_1YearAgo;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-text-input')[6].shadowRoot.querySelector('input')")
+	public WebElement Q45_lastMonth;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-text-input')[7].shadowRoot.querySelector('input')")
+	public WebElement Q45targetIn2Years;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q46. Core Revenue Stream']")
+	public WebElement Q46CoreRevenueStream;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)=concat('What is the estimated contribution of your core revenue stream to company revenue? (If you have multiple revenue streams, you should consider the ',\"'\",'core',\"'\",' as the one you expect to generate the most revenue in 2 years',\"'\",' time)')]")
+	public WebElement q46CoreRevenueStreamText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='CoreRevenueStreamID' and @value='60-80%']")
+	public WebElement Q46_6080;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q47. Core Product or Service']")
+	public WebElement Q47CoreProductOrService;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)=concat('What is the estimated current contribution of your core product or service to company revenue? (If you have multiple products or services, you should consider the ',\"'\",'core',\"'\",' as the one you expect to generate the most revenue in 2 years',\"'\",' time)')]")
+	public WebElement q47CoreProductOrServiceText;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='CoreProductServiceID' and @value='60-80%']")
+	public WebElement Q47_6080;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q48. Largest Client Revenue')]")
+	public WebElement Q48_Largest_Client_Revenue;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='How much revenue do you generate each month from your largest client or customer?']")
+	public WebElement Q48_Text;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q49. International Sales Partnerships']")
+	public WebElement Q49_International_Sales_Partnerships;
+
+	@TextType()
+	@FindByLabel(label = "Q48. Largest Client Revenue")
+	public WebElement q48LargestClientRevenue;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Have you established any sales partnership with businesses abroad in the last 12 months that are generating revenue for the company?']")
+	public WebElement Q49Text;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='AnyInternationalSalesPartnershipsID' and @value='No']")
+	public WebElement Q49_no;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='InternationalOfficeOpenings12monthID' and @value='2']")
+	public WebElement Q50_2;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q51. International Revenue']")
+	public WebElement Q51InternationalRevenue;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-text-input')[9].shadowRoot.querySelector('input')")
+	public WebElement Q51_1YearAgo;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-text-input')[10].shadowRoot.querySelector('input')")
+	public WebElement Q51_lastMonth;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-text-input')[11].shadowRoot.querySelector('input')")
+	public WebElement Q51_targetIn2Years;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q52. Countries with sales operations']")
+	public WebElement Q52CountriesWithSalesOperations;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='United Kingdom']")
+	public WebElement Q52_UK;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='Canada']")
+	public WebElement Q52_Canada;
+
+	@TextType()
+	@FindByLabel(label = "Q52a. Other countries with sales operations")
+	public WebElement q52AOtherCountriesWithSalesOperations;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q53. Recurring Revenue']")
+	public WebElement Q53RecurringRevenue;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='RecurringRevenueID' and @value='25-50%']")
+	public WebElement Q53_2550;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q54. Social Media']")
+	public WebElement Q54Social_Media;
+
+	@TextType()
+	@FindByLabel(label = "Linkedin")
+	public WebElement Q54_linkedin;
+
+	@TextType()
+	@FindByLabel(label = "Twitter")
+	public WebElement Q54_twitter;
+
+	@TextType()
+	@FindByLabel(label = "Facebook")
+	public WebElement Q54_facebook;
+
+	@TextType()
+	@FindByLabel(label = "Instagram")
+	public WebElement Q54_instagram;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q55. Published articles']")
+	public WebElement Q55_Published_Articles;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='In the last 12 months, how many appearances did your company make in national or international press, including news articles, thought-pieces etc.?']")
+	public WebElement Q55Text;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='FeaturesInternationalPress12MtsID' and @value='1-3']")
+	public WebElement Q55_13;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q56. Online articles']")
+	public WebElement Q56OnlineArticles;
+
+	@TextType()
+	@FindByLabel(label = "Q56. Online articles")
+	public WebElement q56OnlineArticles;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Error: Please enter valid number !']")
+	public WebElement EnterValidNumberErrorText;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 9 of 15']")
+	public WebElement Page9of15;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Product or Service Development']")
+	public WebElement ProductOrServiceDevelopment;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q57. Technology maturity']")
+	public WebElement Q57__Technology_maturity;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q57a. 1 year ago']")
+	public WebElement Q57a__1_year_ago;
+
+	@BooleanType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-radios').shadowRoot.querySelectorAll('input')[2]")
+	public WebElement Q57a_MinimumViableProduct;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q57b. Today']")
+	public WebElement Q57b__Today;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='technologyMaturityTodayID' and @value='Stable and deployed product or service (approximate technology readiness level 6-9)']")
+	public WebElement stableAndDeployedProductOrServiceApproximateTechnologyReadinessLevel69;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q57c. Target in 2 years']")
+	public WebElement Q57c__Target_in_2_years;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='technologyMaturityTarget2YrsID' and @value='New products or services under development or deployment']")
+	public WebElement Q57c_newProductsOrServicesUnderDevelopmentOrDeployment;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q58. Technical Complexity']")
+	public WebElement Q58__Technical_Complexity;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='TechnicalComplexityProdServiceID' and @value='Very Complex']")
+	public WebElement Q58_veryComplex;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q59. Core Product or Service Testing']")
+	public WebElement Q59__Core_Product_or_Service_Testing;
+
+	@BooleanType()
+	@JavascriptBy(jspath = "return document.querySelectorAll('uxgovuk-gov-radios')[4].shadowRoot.querySelectorAll('input')[1]")
+	public WebElement Q59_no;
+
+	@BooleanType()
+	@FindBy(xpath = "//div[@flowruntime-basesection_basesection]/flowruntime-screen-field//div//legend/label[text()='Q60. New Product Launches']/ancestor::div/fieldset/div[@class=\"govuk-radios\"]/div[1]/label")
+	public WebElement Q60_yes;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 10 of 15']")
+	public WebElement Page10of15;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q57a. Technology maturity 1 year ago')]/ancestor::div/dd/a")
+	public WebElement changeQ57aTechnologymaturity1yearago;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q60a. Describe your planned new products or services']")
+	public WebElement Q60a__Describe_your_planned_new_products_or_services;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-text-area').shadowRoot.querySelector('textarea')")
+	public WebElement q60ADescribeYourPlannedNewProductsOrServices;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q60b. Launch of your planned new products or services']")
+	public WebElement Q60b__Launch_of_your_planned_new_products_or_services;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='AnticipatedLaunchNewProductsID' and @value=concat('In 2-3 years',\"'\",' time')]")
+	public WebElement Q60b_in2_3YearsTime;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q60c. Development of your planned new products or services']")
+	public WebElement Q60c__Development_of_your_planned_new_products_or_services;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='CurrenStageNewProductID' and @value='Stable and deployed product or service (approximate technology, manufacturing or commercial readiness level 6-9)']")
+	public WebElement Q60c_stableAndDeployedProduct;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q60d. Contribution of your planned new products or services']")
+	public WebElement Q60d__Contribution_of_your_planned_new_products_or_services;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='ExpectedContribNewProductsID' and @value='20-40%']")
+	public WebElement Q60d_2040;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q61. Number of Technical Employees')]")
+	public WebElement Q61__Number_of_Technical_Employees;
+
+	@TextType()
+	@FindByLabel(label = "Q61. Number of Technical Employees")
+	public WebElement q61NumberOfTechnicalEmployees;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q62. Collaborations']")
+	public WebElement Q62__Collaborations;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='ThirdPartySupporForRDID' and @value='No']")
+	public WebElement Q62_no;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q63. Intellectual Property (IP)']")
+	public WebElement Q63__Intellectual_Property;
+
+	@TextType()
+	@FindByLabel(label = "Patents applied for since launch")
+	public WebElement patentsAppliedForSinceLaunch;
+
+	@TextType()
+	@FindByLabel(label = "Patents granted since launch")
+	public WebElement patentsGrantedSinceLaunch;
+
+	@TextType()
+	@FindByLabel(label = "Patents applications planned")
+	public WebElement patentsApplicationsPlanned;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 11 of 15']")
+	public WebElement Page_11_of_15;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q64. Financial overview')]/ancestor::div/dd/a")
+	public WebElement changeQ64FinancialOverview;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Funding Strategy']")
+	public WebElement Funding_Strategy;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q64. Financial Overview']")
+	public WebElement Q64__Financial_Overview;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Provide a description of the current financial position of your business and your future strategy for funding your growth through innovation. Describe any plans that you have for raising additional capital and set out the progress of implementation of those plans. Explain why you need public funding to support your proposed innovation project and why funding is not available from your own resources or private sector sources.']")
+	public WebElement Q64Text;
+
+	@TextType()
+	@FindByLabel(label = "Q64. Financial Overview")
+	public WebElement Q64FinancialOverviewTxtBox;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q65. Number of Funding Rounds')]")
+	public WebElement Q65__Number_of_Funding_Rounds;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Since incorporation, how many funding rounds have you completed, excluding capital raised from founders, friends and family?']")
+	public WebElement Q65Text;
+
+	@TextType()
+	@FindByLabel(label = "Q65. Number of Funding Rounds")
+	public WebElement q65NumberOfFundingRounds;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q66. Funds Raised']")
+	public WebElement Q66__Funds_Raised;
+
+	@TextType()
+	@FindByLabel(label = "Equity Investment")
+	public WebElement equityInvestment;
+
+	@TextType()
+	@FindByLabel(label = "Loans from shareholders / directors")
+	public WebElement loansFromShareholdersDirectors;
+
+	@TextType()
+	@FindByLabel(label = "Convertible or venture debt")
+	public WebElement convertibleOrVentureDebt;
+
+	@TextType()
+	@FindByLabel(label = "Commercial debt")
+	public WebElement commercialDebt;
+
+	@TextType()
+	@FindByLabel(label = "Q67. Post Money Valuation")
+	public WebElement Q67POstMoneyValation;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q68. Funding Amount Confidence Level']")
+	public WebElement Q68__Funding_Amount_Confidence_Level;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Certainty of amount of your next capital raise. From 1 (low) to 5 (high), how precisely do you know the amount of your next external equity or debt capital raise?']")
+	public WebElement Q68Text;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='FundingRoundAmtConfiLevelID' and @value='3']")
+	public WebElement Q68_3;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q69. Funding Timing Confidence Level']")
+	public WebElement Q69__Funding_Timing_Confidence_Level;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='FundingRoundTimingConfiLevelID' and @value='4']")
+	public WebElement Q69_4;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q70. Funding Action Plan Confidence Level']")
+	public WebElement Q70__Funding_Action_Plan_Confidence_Level;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='FundingRoundActionConfLevelID' and @value='5']")
+	public WebElement Q70_5;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q71. Funding Strategy']")
+	public WebElement Q71__Funding_Strategy;
+
+	@BooleanType()
+	@FindBy(xpath = "//input[@name='CurrentFundingStrategyID' and @value='Mainly external equity']")
+	public WebElement Q71mainlyExternalEquity;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q72. Funding Plan')]")
+	public WebElement Q72__Funding_Plan;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='State the amount of equity and debt finance that you plan to raise in the next 2 years. You should ensure that these match with your answer to Q64 and the forecasts shown in your financial spreadsheet.']")
+	public WebElement Q72_Text;
+
+	@TextType()
+	@FindByLabel(label = "Q72. Funding Plan")
+	public WebElement Q72FundingPlan;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q73. Turnover')]")
+	public WebElement Q73__Turnover;
+
+	@TextType()
+	@FindByLabel(label = "Q73. Turnover")
+	public WebElement Q73TurnOver;
+
+	@TextType()
+	@FindByLabel(label = "Q74. EBITDA")
+	public WebElement q74EBITDA;
+
+	@TextType()
+	@FindByLabel(label = "Q75. Company’s debtor balance")
+	public WebElement Q75CompanyDebtorBalance;
+
+	@TextType()
+	@FindByLabel(label = "Q76. Company’s cash balance")
+	public WebElement Q76CompanycashBalance;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 12 of 15']")
+	public WebElement Page_12_of_15;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Growth Challenges']")
+	public WebElement Growth_Challenges;
+
+	@TextType()
+	@FindBy(xpath = "//label[contains(text(),'Q77. Growth challenges')]")
+	public WebElement Q77__Growth_challenges;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='What are the most important risks to your business or the challenges to your growth? How do you plan to mitigate these risk or challenges?']")
+	public WebElement Q77Text;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-text-area').shadowRoot.querySelector('textarea')")
+	public WebElement Q77_TxtBox;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 13 of 15']")
+	public WebElement Page_13_of_15;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 14 of 15']")
+	public WebElement Page_14_of_15;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q77. Growth challenges')]/ancestor::div/dd/a")
+	public WebElement changeQ77GrowthChallenges;
+
+	@ButtonType(file=true)
+	@FindBy(xpath = "//label[contains(text(),'Upload a file') or contains(text(),'upload a file')]//following::input")
+	public WebElement Upload;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-table').shadowRoot.querySelectorAll('th')[4]")
+	public WebElement UpLoadDocType;
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('uxgovuk-gov-table').shadowRoot.querySelectorAll('th')[3]")
+	public WebElement Q78AttachFileName;
+
+	@ButtonType()
+	@FindBy(xpath = "//button[normalize-space(.)='Upload Documents' or normalize-space(.)='Upload documents']")
+	public WebElement attachFileButton;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q78. Attach completed financial spreadsheet')]/ancestor::div/dd/a")
+	public WebElement changeQ78AttachCompletedFinancialSpreadsheet;
+
+	@LinkType()
+	@FindBy(xpath = "//dt[contains(text(),'Q79. Attach supporting documents')]/ancestor::div/dd/a")
+	public WebElement changeQ83AttachSupportingDocuments;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Financial Information (upload attachment)']")
+	public WebElement FinanceInformationUpLoadLabel;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Q78. Attach completed financial spreadsheet']")
+	public WebElement Q78Attachcompletedfinancialspreadsheet;
+
+	@TextType()
+	@FindBy(xpath = "//b[normalize-space(.)='You have submitted your Business and Financial Information.']")
+	public WebElement SubmittedApplicationConfirmationTxt;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q19. Ownership of the business']")
+	public WebElement Q19OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q19. Ownership of the business']/following::dd[1]")
+	public WebElement Q19OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q20. Number of Founders']")
+	public WebElement Q20OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q20. Number of Founders']/following::dd[1]")
+	public WebElement Q20OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q21a. Number of Employees 1 year ago']")
+	public WebElement Q21aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q21a. Number of Employees 1 year ago']/following::dd[1]")
+	public WebElement Q21aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q21b. Number of Employees today']")
+	public WebElement Q21bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q21b. Number of Employees today']/following::dd[1]")
+	public WebElement Q21bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q22. Current Offices']")
+	public WebElement Q22OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q22. Current Offices']/following::dd[1]")
+	public WebElement Q22OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q23. Number of Operating Partners']")
+	public WebElement Q23OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q23. Number of Operating Partners']/following::dd[1]")
+	public WebElement Q23OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q24. Availability of Founders and Operating Partners']")
+	public WebElement Q24OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q24. Availability of Founders and Operating Partners']/following::dd[1]")
+	public WebElement Q24OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='24a. Availability of Founders and Operating Partners - Other']")
+	public WebElement Q24aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='24a. Availability of Founders and Operating Partners - Other']/following::dd[1]")
+	public WebElement Q24aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q25.a Partners previously been entrepreneurs']")
+	public WebElement Q25aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q25.a Partners previously been entrepreneurs']/following::dd[1]")
+	public WebElement Q25aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q25.b Partners with extensive experience']")
+	public WebElement Q25bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q25.b Partners with extensive experience']/following::dd[1]")
+	public WebElement Q25bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q26. Paid in Capital']")
+	public WebElement Q26OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q26. Paid in Capital']/following::dd[1]")
+	public WebElement Q26OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q26a. Paid in Capital - Other']")
+	public WebElement Q26aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q26a. Paid in Capital - Other']/following::dd[1]")
+	public WebElement Q26aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q27. Retained Shares']")
+	public WebElement Q27OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q27. Retained Shares']/following::dd[1]")
+	public WebElement Q27OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q28. Professional Investors as Shareholders']")
+	public WebElement Q28OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q28. Professional Investors as Shareholders']/following::dd[1]")
+	public WebElement Q28OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q29. Type of Investors']")
+	public WebElement Q29OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q29. Type of Investors']/following::dd[1]")
+	public WebElement Q29OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Corporate governance and employees']")
+	public WebElement CorporateGovernanceAndEmployeesLabel;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q30. Board of Directors']")
+	public WebElement Q30OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q30. Board of Directors']/following::dd[1]")
+	public WebElement Q30OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q31.Frequency of Board Meetings']")
+	public WebElement Q31OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q31.Frequency of Board Meetings']/following::dd[1]")
+	public WebElement Q31OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q32. Advisory Board']")
+	public WebElement Q32OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q32. Advisory Board']/following::dd[1]")
+	public WebElement Q32OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q33. Frequency of Advisory Board Meetings']")
+	public WebElement Q33OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q33. Frequency of Advisory Board Meetings']/following::dd[1]")
+	public WebElement Q33OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q34. Technical Hiring Confidence Level']")
+	public WebElement Q34OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q34. Technical Hiring Confidence Level']/following::dd[1]")
+	public WebElement Q34OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q35. Sales Hiring Confidence Level']")
+	public WebElement Q35OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q35. Sales Hiring Confidence Level']/following::dd[1]")
+	public WebElement Q35OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q36. Other Hiring Confidence Level']")
+	public WebElement Q36OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q36. Other Hiring Confidence Level']/following::dd[1]")
+	public WebElement Q36OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q37. Time for New Joiners']")
+	public WebElement Q37OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q37. Time for New Joiners']/following::dd[1]")
+	public WebElement Q37OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q38a. Total Hires in next 12 months']")
+	public WebElement Q38aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q38a. Total Hires in next 12 months']/following::dd[1]")
+	public WebElement Q38aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q38b. Total Hires in next 2 years']")
+	public WebElement Q38bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q38b. Total Hires in next 2 years']/following::dd[1]")
+	public WebElement Q38bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q39. International Offices']")
+	public WebElement Q39OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q39. International Offices']/following::dd[1]")
+	public WebElement Q39OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Commercial Activity']")
+	public WebElement CommercialActivity;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q40. Business Plan Overview']")
+	public WebElement Q40OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q40. Business Plan Overview']/following::dd[1]")
+	public WebElement Q40OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q41a. Monthly revenue 1 year ago.']")
+	public WebElement Q41aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q41a. Monthly revenue 1 year ago.']/following::dd[1]")
+	public WebElement Q41aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q41b. Monthly revenue last month.']")
+	public WebElement Q41bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q41b. Monthly revenue last month.']/following::dd[1]")
+	public WebElement Q41bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q41c. Monthly revenue target in 2 years.']")
+	public WebElement Q41cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q41c. Monthly revenue target in 2 years.']/following::dd[1]")
+	public WebElement Q41cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q42. Average monthly variable costs']")
+	public WebElement Q42OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q42. Average monthly variable costs']/following::dd[1]")
+	public WebElement Q42OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q43. Average monthly fixed costs']")
+	public WebElement Q43OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q43. Average monthly fixed costs']/following::dd[1]")
+	public WebElement Q43OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q44. Expected Breakeven Point']")
+	public WebElement Q44OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q44. Expected Breakeven Point']/following::dd[1]")
+	public WebElement Q44OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q45a. Number of paying customers 1 year ago.']")
+	public WebElement Q45aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q45a. Number of paying customers 1 year ago.']/following::dd[1]")
+	public WebElement Q45aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q45b. Number of paying customers last month.']")
+	public WebElement Q45bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q45b. Number of paying customers last month.']/following::dd[1]")
+	public WebElement Q45bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q45c. Number of paying customers target in 2 years.']")
+	public WebElement Q45cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q45c. Number of paying customers target in 2 years.']/following::dd[1]")
+	public WebElement Q45cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q46. Core Revenue Stream']")
+	public WebElement Q46cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q46. Core Revenue Stream']/following::dd[1]")
+	public WebElement Q46cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q47. Core Product or Service']")
+	public WebElement Q47OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q47. Core Product or Service']/following::dd[1]")
+	public WebElement Q47OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q48. Largest Client Revenue']")
+	public WebElement Q48OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q48. Largest Client Revenue']/following::dd[1]")
+	public WebElement Q48OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q49. International Sales Partnerships']")
+	public WebElement Q49OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q49. International Sales Partnerships']/following::dd[1]")
+	public WebElement Q49OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q50. International Offices']")
+	public WebElement Q50OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q50. International Offices']/following::dd[1]")
+	public WebElement Q50OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q51a. International Revenue 1 year ago']")
+	public WebElement Q51aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q51a. International Revenue 1 year ago']/following::dd[1]")
+	public WebElement Q51aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q51b. International Revenue last month']")
+	public WebElement Q51bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q51b. International Revenue last month']/following::dd[1]")
+	public WebElement Q51bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q51c. International Revenue in 2 years']")
+	public WebElement Q51cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q51c. International Revenue in 2 years']/following::dd[1]")
+	public WebElement Q51cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q52. Countries with sales operations']")
+	public WebElement Q52OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q52. Countries with sales operations']/following::dd[1]")
+	public WebElement Q52OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q52a. Other countries with sales operations']")
+	public WebElement Q52aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q52a. Other countries with sales operations']/following::dd[1]")
+	public WebElement Q52aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q53. Recurring Revenue']")
+	public WebElement Q53OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q53. Recurring Revenue']/following::dd[1]")
+	public WebElement Q53OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54a. LinkedIn']")
+	public WebElement Q54aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54a. LinkedIn']/following::dd[1]")
+	public WebElement Q54aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54b. Twitter']")
+	public WebElement Q54bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54b. Twitter']/following::dd[1]")
+	public WebElement Q54bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54c. Facebook']")
+	public WebElement Q54cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54c. Facebook']/following::dd[1]")
+	public WebElement Q54cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54d. Instagram']")
+	public WebElement Q54dOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q54d. Instagram']/following::dd[1]")
+	public WebElement Q54dOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q55. Published articles']")
+	public WebElement Q55OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q55. Published articles']/following::dd[1]")
+	public WebElement Q55OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q56. Online articles']")
+	public WebElement Q56OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q56. Online articles']/following::dd[1]")
+	public WebElement Q56OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Product or Service Development']")
+	public WebElement ProductOrServiceDevelopmentLabelOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q57a. Technology maturity 1 year ago']")
+	public WebElement Q57qOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q57a. Technology maturity 1 year ago']/following::dd[1]")
+	public WebElement Q57aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q57b. Technology maturity today.']")
+	public WebElement Q57bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q57b. Technology maturity today.']/following::dd[1]")
+	public WebElement Q57bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q57c. Technology maturity target in 2 years.']")
+	public WebElement Q57cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q57c. Technology maturity target in 2 years.']/following::dd[1]")
+	public WebElement Q57cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q58. Technical Complexity']")
+	public WebElement Q58OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q58. Technical Complexity']/following::dd[1]")
+	public WebElement Q58OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q59. Core Product or Service Testing']")
+	public WebElement Q59OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q59. Core Product or Service Testing']/following::dd[1]")
+	public WebElement Q59OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60. New Product Launches']")
+	public WebElement Q60OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60. New Product Launches']/following::dd[1]")
+	public WebElement Q60OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60a. Planned new products or services']")
+	public WebElement Q60aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60a. Planned new products or services']/following::dd[1]")
+	public WebElement Q60aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60b. Launch of your planned new products or services']")
+	public WebElement Q60bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60b. Launch of your planned new products or services']/following::dd[1]")
+	public WebElement Q60bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60c. Development of your planned new products or services']")
+	public WebElement Q60cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60c. Development of your planned new products or services']/following::dd[1]")
+	public WebElement Q60cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60d. Contribution of your planned new products or services']")
+	public WebElement Q60dOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q60d. Contribution of your planned new products or services']/following::dd[1]")
+	public WebElement Q60dOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q61. Number of Technical Employees']")
+	public WebElement Q61OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q61. Number of Technical Employees']/following::dd[1]")
+	public WebElement Q61OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q62. Collaborations']")
+	public WebElement Q62OnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q62. Collaborations']/following::dd[1]")
+	public WebElement Q62OnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q63a. Patents applied For since launch']")
+	public WebElement Q63aOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q63a. Patents applied For since launch']/following::dd[1]")
+	public WebElement Q63aOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q63b. Patents granted since launch']")
+	public WebElement Q63bOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q63b. Patents granted since launch']/following::dd[1]")
+	public WebElement Q63bOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q63c. Patents applications planned']")
+	public WebElement Q63cOnSummary;
+
+	@TextType()
+	@FindBy(xpath = "//dt[normalize-space(.)='Q63c. Patents applications planned']/following::dd[1]")
+	public WebElement Q63cOnSummaryAnswer;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Business and financial information']")
+	public WebElement BusinessandFinancialInformation_Label;
+
+	@TextType()
+	@FindBy(xpath = "//span[normalize-space(.)='Page 1 of 15']")
+	public WebElement Page1of15;
+
+	@TextType()
+	@FindBy(xpath = "//h2[normalize-space(.)='Contact Information']")
+	public WebElement ContactInformationLabel;
+
+	@TextType()
+	@FindByLabel(label = "First Name")
+	public WebElement firstName;
+
+	@TextType()
+	@FindByLabel(label = "Last Name")
+	public WebElement lastName;
+
+	@TextType()
+	@FindByLabel(label = "Job Title")
+	public WebElement jobTitle;
+
+	@TextType()
+	@FindByLabel(label = "Email address")
+	public WebElement emailAddress;
+
+	@TextType()
+	@FindByLabel(label = "Phone Number")
+	public WebElement phoneNumber;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q7a. Company sector or industry']")
+	public WebElement Q7aCompanySectorLabel;
+
+	@TextType()
+	@FindBy(xpath = "//div[normalize-space(.)='Please select the sector which most closely aligns to your company.']")
+	public WebElement Q7aText;
+
+	@BooleanType()
+	@FindByLabel(label = "High value and advanced manufacturing and materials")
+	public WebElement Q7ahighValueAndAdvancedManufacturingAndMaterials;
+
+	@FindBy(xpath = "//label[contains(text(),'Q7b. Other company sector or industry')]")
+	public WebElement Q7bOtherCompanySectorLabel;
+
+	@TextType()
+	@FindBy(xpath = "//label[normalize-space(.)='Q8a. Country of incorporation']")
+	public WebElement Q8aCountryofIncorporation;
+
+	@BooleanType()
+	@FindByLabel(label = "England & Wales")
+	public WebElement Q8aCountryofIncorporation_englandAndWales;
+
+	@FindBy(xpath = "//label[contains(text(),'Q8b. Country of incorporation - Other')]")
+	public WebElement Q8bCountryofIncorportionOtherLabel;
+
+
+ Pageobject Location : C:\Users\vishal.poudel\Provar\URLTest\URL_Pro\src\pageobjects\MyPageObject.java
+
+ Pageobject Name : MyPageObject.java
+
+@ChoiceListType()
+@FindBy(xpath = "(//c-pnl-ui-input-select/span/span/select)[1]/option[@value='Extra@Home products']")
+public WebElement dropdown_One_secondnew;
+
+@BooleanType()
+@FindBy(xpath = "//label[normalize-space(.)='Een andere dienstVoor extra diensten zoals een postbus, de haal- en brengservice en meer.']//input[@name='productOption']")
+public WebElement radio;
+
+@BooleanType()
+@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//label[normalize-space(.)='Select item 1']/span[1]")
+public WebElement SelectRow;
+
+
+ Pageobject Location : C:\Users\vishal.poudel\Provar\URLTest\URL_Pro\src\pageobjects\VerifyDownloadedFile.java
+
+ Pageobject Name : VerifyDownloadedFile.java
+
+	@TextType()
+	@JavascriptBy(jspath = "return document.querySelector('td:nth-child(1) > table > tbody > tr > td:nth-child(2) > div > div > ol > li')")
+	public WebElement amount1;
+
+	@ButtonType(file = true)
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//span[normalize-space(.)='Upload Files']")
+	public WebElement AttachFile;
+
+	@ButtonType(file = true)
+	@FindBy(xpath = "//div[contains(@class,'active') and contains(@class,'oneContent')]//span[normalize-space(.)='Upload Files']")
+	public WebElement AttachFile11;
+

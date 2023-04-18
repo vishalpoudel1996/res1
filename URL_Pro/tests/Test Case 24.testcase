@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: a">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">a</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">a,s,d,f,gekfjgeibklejgbrehgiehgeriughreioughiu gerougyr eoiug eroiuhreli uvgeroifugr vougeo iuerocygrover oieqr fvouyeoerqgfoaekhgfoc udscledg ofeh cpevjekblejgf erj ireuhrgreg,reg,ret,reg,ergt,reg,eh,reh,rt,hwt,trh,tr,hwrth,trtrtr,htr,trhrt,s</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" name="Split" testItemId="2" title="Split: {a[1]}=&gt;,=&gt;Tokens">
+      <arguments>
+        <argument id="input">
+          <value class="variable">
+            <path element="a">
+              <filter class="index">
+                <index valueClass="decimal">0</index>
+              </filter>
+            </path>
+          </value>
+        </argument>
+        <argument id="separator">
+          <value class="value" valueClass="string">,</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Tokens</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.messaging.PublishMessage" name="PublishMessage" testItemId="3" title="Publish Message: personalGmail">
+      <arguments>
+        <argument id="destinationConnectionName">
+          <value class="value" valueClass="string">personalGmail</value>
+        </argument>
+        <argument id="body">
+          <value class="value" valueClass="string">hahahaa</value>
+        </argument>
+        <argument id="payloadFormat">
+          <value class="value" valueClass="string">Auto</value>
+        </argument>
+      </arguments>
+      <parameterValueSources/>
+    </apiCall>
+  </steps>
+</testCase>

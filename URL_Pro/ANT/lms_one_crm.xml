@@ -1,0 +1,37 @@
+<project default="runtests">
+	<property environment="env" />
+	<property name="provar.home" value="C:/Program Files/Provar2.8New/" />
+	<property name="testproject.home" value="${user.dir}/URL_Pro" />
+	<property name="testproject.results" value="${user.dir}/URL_Pro/ANT/Results" />
+	<property name="secrets.password" value="${env.ProvarSecretsPassword}" />
+	<property name="testenvironment.secretspassword" value="${env.ProvarSecretsPassword_EnvName}" />
+	<property name="license.path" value="${provar.home}" />
+	<property name="testcycle.path" value="${testproject.home}/TestCycle" />
+	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar" />
+	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar" />
+	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar" />
+	<target name="runtests">
+		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}" />
+		<parallel>
+			<Run-Test-Case provarHome="${provar.home}" projectPath="${testproject.home}" resultsPath="${testproject.results}" resultsPathDisposition="Increment" testEnvironment="1337b" webBrowser="Chrome" webBrowserConfiguration="Full Screen" excludeCallableTestCases="true" salesforceMetadataCache="Reload" projectCachePath="../../.provarCaches9" testOutputlevel="DIAGNOSTIC" pluginOutputlevel="FINEST" stopTestRunOnError="false" secretsPassword="${secrets.password}" testEnvironmentSecretsPassword="${testenvironment.secretspassword}" testCyclePath="${testcycle.path}" licensepath="${provar.home}\.licenses\License.properties" dontFailBuild="true" invokeTestRunMonitor="false" smtpPath="${testproject.home}/.smtp">
+				<fileset dir="${testproject.home}/tests/lms_one_crm">
+					<include name="ValidateCC_Advertising.testcase" />
+					<include name="ValidateCC_LinkedinPages.testcase" />
+					<include name="ValidateCC_LiveStream.testcase" />
+					<include name="ValidateCC_LiveVideo.testcase" />
+				</fileset>
+			</Run-Test-Case>
+			<Run-Test-Case provarHome="${provar.home}" projectPath="${testproject.home}" resultsPath="${testproject.results}" resultsPathDisposition="Increment" testEnvironment="1337b" webBrowser="Chrome" webBrowserConfiguration="Full Screen" excludeCallableTestCases="true" salesforceMetadataCache="Reload" projectCachePath="../../.provarCaches10" testOutputlevel="INFO" pluginOutputlevel="INFO" stopTestRunOnError="false" secretsPassword="${secrets.password}" testEnvironmentSecretsPassword="${testenvironment.secretspassword}" testCyclePath="${testcycle.path}" licensepath="${provar.home}\.licenses\License.properties" dontFailBuild="true" invokeTestRunMonitor="false" smtpPath="${testproject.home}/.smtp">
+				<fileset dir="${testproject.home}/tests/lms_one_crm">
+					<include name="ValidateOtherCC_LinkedinPages.testcase" />
+					<include name="ValidateOtherCC_Marketplace.testcase" />
+					<include name="ValidateSplCaseType_All.testcase" />
+				</fileset>
+			</Run-Test-Case>
+		</parallel>
+		<Test-Cycle-Report provarHome="${provar.home}" projectPath="${testproject.home}" testCyclePath="${testcycle.path}" reportPath="${testcycle.path}/Report.pdf" failBuildIfFailures="true" invokeTestRunMonitor="true">
+			<emailProperties sendEmail="true" primaryRecipients="kivu@linkedin.com" ccRecipients="svasanthasamy@linkedin.com,testlinkedin.emailtocase@gmail.com" bccRecipients="" emailSubject="LMS One CRM Report" attachExecutionReport="true" attachZip="false"/>
+			<attachmentProperties includeAllFailuresInSummary="false" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="false" includeTestCaseShowSummary="true" includeBasicLogs="false" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="true" includeNoScreenshot="false" includeScreenshotThumbnail="true" includeFullScreenShot="false"/>
+		</Test-Cycle-Report>
+	</target>
+</project>
