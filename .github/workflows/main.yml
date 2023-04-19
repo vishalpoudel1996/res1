@@ -40,15 +40,15 @@ jobs:
         sudo apt-get -y install google-chrome-stable
         sudo add-apt-repository ppa:mozillateam/firefox-next && sudo apt install firefox
         echo $PROVAR_HOME
-        cd $GITHUB_WORKSPACE/test/ANT
-        xvfb-run ant -f build.xml
+        cd $GITHUB_WORKSPACE/proj1/ANT
+        xvfb-run ant -f /home/runner/work/URLTest/URLTest/proj/ANT/build.xml
  
     - uses: actions/upload-artifact@v2
       with:
         name: Execution Report
-        path:${{ github.workspace }}/test/ANT/Results/*
+        path:${{ github.workspace }}/ptoj1/ANT/Results/*
     - uses: actions/upload-artifact@v2
       if: failure()
       with:
         name: Execution Report                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-        path:${{ github.workspace }}/test/ANT/Results/*
+        path:${{ github.workspace }}/proj1/ANT/Results/*
